@@ -1,5 +1,13 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+// add bootstrap css 
+import 'bootstrap/dist/css/bootstrap.css'
+
+
+import Footer from '@/components/layouts/Footer'
+import Header from '@/components/layouts/Header'
+import LeftAside from '@/components/layouts/LeftAside'
+import RightAside from '@/components/layouts/RightAside'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +19,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <div className='container p-0'>
+        <Header/>
+        <main className='row m-0' >
+          <LeftAside/>
+        {children}
+        <RightAside/>
+        </main>
+     <Footer/>
+     </div>
+        </body>
     </html>
   )
 }
