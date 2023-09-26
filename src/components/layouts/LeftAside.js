@@ -9,7 +9,7 @@ export default function LeftAside() {
         <Link className="nav-link active text-white" aria-current="page" href="flight">The Flight</Link>
       </li>
       <li className="nav-item mt-2 clr ">
-        <Link className="nav-link text-white" href="city">The City</Link>
+        <Link className="nav-link text-white" href="/">The City</Link>
       </li>
       <li className="nav-item mt-2 clr ">
         <Link className="nav-link text-white" href="island">The Island</Link>
